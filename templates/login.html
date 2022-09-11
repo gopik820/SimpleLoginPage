@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="../static/styles/style.css">
+
+  <script>
+    function validateForm() {
+      let x = document.forms["Form"]["username"].value;
+      let y = document.forms["Form"]["email"].value;
+      let z = document.forms["Form"]["number"].value;
+      if (x == "") 
+      {
+        alert("Please enter your name");
+        return false;
+      }
+      else if (y == "")
+      {
+        alert("Please enter your email address");
+        return false;
+      }
+      else if (z == "")
+      {
+        alert("Please enter your number");
+        return false;
+      }
+    }
+  </script>
+
+</head>
+<body>
+    <div id="login-form-wrap">
+        <h2>Login</h2>
+        <form name="Form" method="POST" id="login-form" onsubmit="return validateForm()">
+    
+            <p>
+                <input type="text" placeholder="Enter Username" name="username" >
+            </p>
+            <p>
+                <input type="text" placeholder="Enter Email" name="email" />
+            </p>
+            <p>
+                <input type="number" placeholder="Enter Number" name="number" />
+            </p>
+
+            <p><input type="submit" value="submit" /></p>
+        </form>
+
+    </div>
+</body>
+</html>
